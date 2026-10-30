@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Don't Splash Script</title>
+  <meta name="description" content="Get in touch with the Don't Splash Script team for developer inquiries, feedback, corrections, or questions about our educational Roblox Studio Lua guides.">
+  <link rel="canonical" href="https://dontsplashscript.com/contact/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dontsplashscript.com/contact/">
+  <meta property="og:title" content="Contact Us - Don't Splash Script">
+  <meta property="og:description" content="Reach out to the Don't Splash Script team for inquiries, script feedback, and Roblox developer questions.">
+  <meta property="og:image" content="https://dontsplashscript.com/assets/icons/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/forms.css">
+  <link rel="stylesheet" href="../css/components/ads.css">
+  <link rel="stylesheet" href="../css/components/toast.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Component -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="../" class="brand-link" aria-label="Don't Splash Script Homepage">
+        <img src="../assets/icons/logo.svg" alt="Don't Splash Script Logo" class="brand-logo-img">
+        <span>Don't Splash <span class="brand-text-accent">Script</span></span>
+      </a>
+
+      <nav class="site-nav" role="navigation" aria-label="Main Navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu" type="button">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <ul class="nav-menu">
+          <li><a href="../" class="nav-link">Home</a></li>
+          <li><a href="../#scripts" class="nav-link">Scripts</a></li>
+          <li><a href="../#how-to-use" class="nav-link">How to Use</a></li>
+          <li><a href="../#features" class="nav-link">Features</a></li>
+          <li><a href="../#faqs" class="nav-link">FAQs</a></li>
+          <li><a href="../about/" class="nav-link">About Us</a></li>
+          <li><a href="../contact/" class="nav-link active" aria-current="page">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="main-content">
+    <div class="container container-narrow">
+      
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs">
+          <li><a href="../">Home</a></li>
+          <li aria-current="page">Contact Us</li>
+        </ol>
+      </nav>
+
+      <header class="section-header" style="text-align: left; margin-bottom: 32px;">
+        <span class="section-tag">Direct Communication</span>
+        <h1>Contact Us</h1>
+        <p class="section-subtitle">We welcome your questions, feedback, script suggestions, and inquiries.</p>
+      </header>
+
+      <div class="contact-card">
+        <!-- Submission Status Alerts -->
+        <div id="form-success-alert" class="form-alert success" role="alert" style="display: none; margin-bottom: 24px;">
+          <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <strong>Message Received!</strong> Thank you for contacting Don't Splash Script. Our team will review your message promptly.
+          </div>
+        </div>
+
+        <div id="form-error-alert" class="form-alert error" role="alert" style="display: none; margin-bottom: 24px;">
+          <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <strong>Please check your submission:</strong> Kindly fill in all required fields accurately before submitting.
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form" novalidate>
+          
+          <!-- Honeypot Bot Trap (Invisible to real users) -->
+          <div class="form-bot-trap" aria-hidden="true">
+            <label for="bot-field">Do not fill this field if you are human</label>
+            <input type="text" id="bot-field" name="bot_trap_field" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="contact-name" class="form-label">
+              Your Name <span class="required-star">*</span>
+            </label>
+            <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Rivera" required autocomplete="name">
+            <span class="form-error">Please enter your name (minimum 2 characters).</span>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="contact-email" class="form-label">
+              Email Address <span class="required-star">*</span>
+            </label>
+            <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email">
+            <span class="form-error">Please enter a valid email address.</span>
+          </div>
+
+          <!-- Subject Field -->
+          <div class="form-group">
+            <label for="contact-subject" class="form-label">
+              Subject <span class="required-star">*</span>
+            </label>
+            <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Script question or bug report" required>
+            <span class="form-error">Please enter a subject line.</span>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="contact-message" class="form-label">
+              Message <span class="required-star">*</span>
+            </label>
+            <textarea id="contact-message" name="message" class="form-textarea" placeholder="Write your message or inquiry here..." required></textarea>
+            <span class="form-hint">Please provide enough detail so we can offer an accurate response.</span>
+            <span class="form-error">Please enter at least 15 characters in your message.</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-lg" style="align-self: flex-start;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+            Send Message
+          </button>
+        </form>
+
+        <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-muted);">
+          <p>
+            Prefer direct email? You can also email our support desk at <a href="mailto:support@dontsplashscript.com" data-config="contactEmail">support@dontsplashscript.com</a>. We generally respond to community inquiries within 24 to 48 hours.
+          </p>
+        </div>
+      </div>
+
+      <!-- Safe Ad Slot -->
+      <div class="ad-safe-margin">
+        <div class="ad-container" aria-label="Sponsored Space">
+          <span class="ad-label">Advertisement</span>
+          <div class="ad-slot-placeholder ad-slot-banner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Content Banner Placement (468x60)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Component -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="../" class="footer-brand-header">
+            <img src="../assets/icons/logo.svg" alt="Don't Splash Script Logo">
+            <span>Don't Splash Script</span>
+          </a>
+          <p class="footer-desc">
+            An independent educational resource for Roblox players and developers, providing verified Roblox Studio Lua guides, mechanics breakdowns, and safety tips for DONT SPLASH.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../">Home</a></li>
+            <li><a href="../#scripts">Latest Scripts</a></li>
+            <li><a href="../#how-to-use">How to Use Guide</a></li>
+            <li><a href="../#features">Script Concepts</a></li>
+            <li><a href="../#faqs">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Legal &amp; Policy</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../about/">About Us</a></li>
+            <li><a href="../contact/">Contact Us</a></li>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="../terms-and-conditions/">Terms and Conditions</a></li>
+            <li><a href="../disclaimer/">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box">
+        <strong>Independent Fan-Site Notice:</strong> Don't Splash Script is an independent fan and educational website. We are not affiliated with Roblox Corporation or the creators of DONT SPLASH.
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; <span class="dynamic-year">2026</span> Don't Splash Script. All rights reserved.
+        </div>
+        <div class="footer-contact-link">
+          Inquiries: <a href="mailto:support@dontsplashscript.com" data-config="contactEmail">support@dontsplashscript.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/components/toast.js"></script>
+  <script src="../js/components/navbar.js"></script>
+  <script src="../js/components/contact-form.js"></script>
+  <script src="../js/components/ads.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

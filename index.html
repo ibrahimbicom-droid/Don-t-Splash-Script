@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don't Splash Script - Roblox DONT SPLASH Guides, Lua Snippets &amp; Game Mechanics</title>
+  <meta name="description" content="Explore verified DONT SPLASH script information, educational Roblox Studio Lua snippets, survival guides, stealth movement mechanics, and community resources.">
+  <meta name="keywords" content="dont splash script, dont splash roblox, dont splash lua script, roblox studio water script, dont splash guide, poolrooms roblox script">
+  <link rel="canonical" href="https://dontsplashscript.com/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dontsplashscript.com/">
+  <meta property="og:title" content="Don't Splash Script - Roblox DONT SPLASH Guides &amp; Lua Snippets">
+  <meta property="og:description" content="Explore verified DONT SPLASH script information, educational Roblox Studio Lua snippets, survival guides, and stealth movement mechanics.">
+  <meta property="og:image" content="https://dontsplashscript.com/assets/icons/logo.svg">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Don't Splash Script - Roblox DONT SPLASH Guides &amp; Lua Snippets">
+  <meta name="twitter:description" content="Explore verified DONT SPLASH script information, educational Roblox Studio Lua snippets, survival guides, and stealth movement mechanics.">
+  <meta name="twitter:image" content="https://dontsplashscript.com/assets/icons/logo.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/about-game.css">
+  <link rel="stylesheet" href="css/components/script-card.css">
+  <link rel="stylesheet" href="css/components/how-to-use.css">
+  <link rel="stylesheet" href="css/components/features.css">
+  <link rel="stylesheet" href="css/components/faq.css">
+  <link rel="stylesheet" href="css/components/ads.css">
+  <link rel="stylesheet" href="css/components/toast.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://dontsplashscript.com/#website",
+        "url": "https://dontsplashscript.com/",
+        "name": "Don't Splash Script",
+        "description": "Educational Roblox Studio Lua scripts, gameplay guides, and community resources for DONT SPLASH.",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://dontsplashscript.com/#organization",
+        "name": "Don't Splash Script",
+        "url": "https://dontsplashscript.com/",
+        "logo": "https://dontsplashscript.com/assets/icons/logo.svg"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://dontsplashscript.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Don't Splash Script?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Don't Splash Script is an independent educational gaming resource dedicated to Roblox's DONT SPLASH. We provide verified Roblox Studio Lua snippets, game guides, and safety tips."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is DONT SPLASH on Roblox?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DONT SPLASH is a popular Roblox horror and stealth game set in eerie flooded poolrooms where players must avoid making water noise that attracts sound-sensitive creatures."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I copy Lua code from this website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, every script card has a working Copy Script button that copies the clean Lua snippet directly to your clipboard for educational Roblox Studio use."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Component -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="/" class="brand-link" aria-label="Don't Splash Script Homepage">
+        <img src="assets/icons/logo.svg" alt="Don't Splash Script Logo" class="brand-logo-img">
+        <span>Don't Splash <span class="brand-text-accent">Script</span></span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Component -->
+      <nav class="site-nav" role="navigation" aria-label="Main Navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu" type="button">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+          <li><a href="#scripts" class="nav-link">Scripts</a></li>
+          <li><a href="#how-to-use" class="nav-link">How to Use</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#faqs" class="nav-link">FAQs</a></li>
+          <li><a href="about/" class="nav-link">About Us</a></li>
+          <li><a href="contact/" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content" class="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-glow-orb" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          <span>Verified Roblox Studio Lua Guides &amp; Mechanics</span>
+        </div>
+        <h1 id="hero-heading" class="hero-title">
+          Don't Splash <span class="hero-title-highlight">Script</span>
+        </h1>
+        <p class="hero-lead">
+          Explore useful DONT SPLASH script information, game guides, features, and community resources for Roblox players.
+        </p>
+        <div class="hero-actions">
+          <a href="#scripts" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+            </svg>
+            Explore Scripts
+          </a>
+          <a href="#how-to-use" class="btn btn-secondary btn-lg">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            How to Use
+          </a>
+        </div>
+
+        <!-- Quick Stats Overview -->
+        <div class="hero-stats" role="region" aria-label="Quick Highlights">
+          <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Roblox Studio Compliant</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">0%</span>
+            <span class="stat-label">Malicious Executables</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Verified</span>
+            <span class="stat-label">Updated for Latest Patches</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Compliant Advertisement Slot (Separated from buttons) -->
+    <div class="container ad-safe-margin">
+      <div class="ad-container" aria-label="Sponsored Space">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-slot-placeholder ad-slot-leaderboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span>Responsive Ad Placement (728x90)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: About the Game -->
+    <section class="section section-alt" id="about-game" aria-labelledby="about-game-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Game Overview</span>
+          <h2 id="about-game-heading">About DONT SPLASH on Roblox</h2>
+          <p class="section-subtitle">Understanding the mechanics, sound-based stealth physics, and atmospheric horror elements.</p>
+        </div>
+
+        <div class="about-game-grid">
+          <div class="game-info-card">
+            <div class="card-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <h3>What is DONT SPLASH?</h3>
+            <p>
+              DONT SPLASH is a tension-filled psychological survival game on Roblox inspired by liminal poolrooms. Players navigate an expansive maze of tiled aquatic chambers where every step in the water generates acoustic ripples that can be detected by wandering hostile entities.
+            </p>
+          </div>
+
+          <div class="game-info-card">
+            <div class="card-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+            </div>
+            <h3>What Makes Gameplay Unique?</h3>
+            <p>
+              Unlike standard obstacle courses or chase games, DONT SPLASH punishes haste. Moving at normal sprint speeds while submerged produces loud splashing sounds. Success demands mastering stealth pacing, utilizing dry ledges, timing dashes between safe platforms, and deciphering environmental codes.
+            </p>
+          </div>
+
+          <div class="game-info-card">
+            <div class="card-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>Why Players Seek Script Guides</h3>
+            <p>
+              Roblox developers and curious players frequently study how the game calculates velocity thresholds in water, triggers sound alerts, and manages atmospheric volumetric fog. Our guides provide transparent Lua architecture to help you understand these mechanics in Roblox Studio.
+            </p>
+          </div>
+        </div>
+
+        <div class="gameplay-callout">
+          <div class="callout-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="callout-content">
+            <h4>Promoting Safe, Educational Exploration</h4>
+            <p>
+              Don't Splash Script is committed to cybersecurity awareness. We provide verified, legitimate Lua scripts designed for your own Roblox Studio creations while teaching players how to recognize and avoid unsafe third-party exploits that compromise accounts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Latest Script Listings -->
+    <section class="section" id="scripts" aria-labelledby="scripts-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Developer Snippets</span>
+          <h2 id="scripts-heading">Verified DONT SPLASH Script Listings</h2>
+          <p class="section-subtitle">
+            Authentic, educational Lua modules tested for Roblox Studio development. Click "Copy Script" to quickly copy the code snippet.
+          </p>
+        </div>
+
+        <!-- Dynamic Container for Script Cards -->
+        <div class="scripts-grid" id="scripts-list-container">
+          <!-- Populated by js/components/script-card.js using data/scripts.js -->
+          <noscript>
+            <div class="game-info-card">
+              <h3>JavaScript is Required</h3>
+              <p>Please enable JavaScript to view interactive script listings and copy Lua snippets to your clipboard.</p>
+            </div>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: How to Use Guide -->
+    <section class="section section-alt" id="how-to-use" aria-labelledby="how-to-use-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Beginner Walkthrough</span>
+          <h2 id="how-to-use-heading">How to Use &amp; Understand Roblox Scripts</h2>
+          <p class="section-subtitle">A step-by-step educational guide on safely implementing Lua scripts in Roblox Studio.</p>
+        </div>
+
+        <div class="guide-steps-grid">
+          <div class="guide-step-card">
+            <span class="step-number" aria-hidden="true">01</span>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h3>1. Inspect the Lua Snippet</h3>
+            <p>
+              Carefully review the script code block. Safe Roblox scripts are always readable plain-text Lua files. Check for standard services like <code>RunService</code>, <code>TweenService</code>, or <code>Players</code>.
+            </p>
+          </div>
+
+          <div class="guide-step-card">
+            <span class="step-number" aria-hidden="true">02</span>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>2. Open Roblox Studio</h3>
+            <p>
+              Launch the official Roblox Studio application on your computer. Create a new test place or open your game project in a sandboxed, safe local environment.
+            </p>
+          </div>
+
+          <div class="guide-step-card">
+            <span class="step-number" aria-hidden="true">03</span>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              </svg>
+            </div>
+            <h3>3. Insert the Appropriate Script</h3>
+            <p>
+              Depending on the script type indicated on the card, insert a <code>LocalScript</code> into <code>StarterPlayerScripts</code> or a standard <code>Script</code> into <code>ServerScriptService</code>.
+            </p>
+          </div>
+
+          <div class="guide-step-card">
+            <span class="step-number" aria-hidden="true">04</span>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+            <h3>4. Test &amp; Fine-Tune Parameters</h3>
+            <p>
+              Click Play in Studio to simulate game physics. Observe the Output window (View &gt; Output) to monitor debug prints, velocity numbers, and trigger reactions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Safety Warning Box -->
+        <div class="safety-warning-box">
+          <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <div class="warning-content">
+            <h4>Critical Safety Notice: Identifying Unsafe Downloads</h4>
+            <p>
+              Never download executable files (<code>.exe</code>, <code>.bat</code>, <code>.scr</code>) or install browser extensions claiming to inject scripts into Roblox. Malicious third-party exploit hubs often bundle Trojan horses, token stealers, or adware.
+            </p>
+            <p>
+              Legitimate Lua scripts are strictly text. Don't Splash Script never asks you to download suspicious files, enter your account credentials, or install unauthorized software.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Script Features -->
+    <section class="section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Concepts</span>
+          <h2 id="features-heading">Game Script Concepts Explained</h2>
+          <p class="section-subtitle">Deep dive into the underlying programming architecture powering DONT SPLASH mechanics.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-concept-card">
+            <div class="feature-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3>Velocity Threshold Tracking</h3>
+            <p>
+              How Lua inspects <code>HumanoidRootPart.AssemblyLinearVelocity</code> to distinguish between gentle paddling and rapid splashing movement.
+            </p>
+          </div>
+
+          <div class="feature-concept-card">
+            <div class="feature-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3>Acoustic Radius Calculation</h3>
+            <p>
+              Mathematical models using <code>(EntityPosition - PlayerPosition).Magnitude</code> to simulate distance-based listening entities.
+            </p>
+          </div>
+
+          <div class="feature-concept-card">
+            <div class="feature-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3>Atmospheric Shaders &amp; Fog</h3>
+            <p>
+              Leveraging Roblox Lighting service and post-processing color correction to produce that signature greenish poolroom dread.
+            </p>
+          </div>
+
+          <div class="feature-concept-card">
+            <div class="feature-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3>Server-Side Checkpoint Sync</h3>
+            <p>
+              Preventing state desync by validating puzzle solutions and door unlocks authoritatively on the Roblox game server.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliant Mid-Page Ad Slot (Well separated from interactive copy buttons) -->
+    <div class="container ad-safe-margin">
+      <div class="ad-container" aria-label="Sponsored Space">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-slot-placeholder ad-slot-banner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span>Content Banner Placement (468x60)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Frequently Asked Questions -->
+    <section class="section section-alt" id="faqs" aria-labelledby="faqs-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Common Inquiries</span>
+          <h2 id="faqs-heading">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Got questions regarding DONT SPLASH scripts and gaming guidelines? Find quick answers here.</p>
+        </div>
+
+        <div class="faq-list" id="faq-accordion-container">
+          <!-- Populated by js/components/faq.js using data/faqs.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Call to Action Section -->
+    <section class="section cta-section" aria-labelledby="cta-heading">
+      <div class="container" style="text-align: center; max-width: 780px;">
+        <span class="section-tag">Community &amp; Learning</span>
+        <h2 id="cta-heading" style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 16px;">
+          Ready to Build &amp; Master Roblox Mechanics?
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 32px;">
+          Dive into our verified Lua snippets, explore stealth gameplay architecture, or get in touch with our team for new developer guides.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="#scripts" class="btn btn-primary btn-lg">Browse Script Snippets</a>
+          <a href="/contact/" class="btn btn-secondary btn-lg">Contact Our Team</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Component -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="/" class="footer-brand-header">
+            <img src="assets/icons/logo.svg" alt="Don't Splash Script Logo">
+            <span>Don't Splash Script</span>
+          </a>
+          <p class="footer-desc">
+            An independent educational resource for Roblox players and developers, providing verified Roblox Studio Lua guides, mechanics breakdowns, and safety tips for DONT SPLASH.
+          </p>
+          <div class="footer-meta-pill">
+            <span class="meta-status-dot"></span>
+            <span>Roblox Community Safety Compliant</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="#scripts">Latest Scripts</a></li>
+            <li><a href="#how-to-use">How to Use Guide</a></li>
+            <li><a href="#features">Script Concepts</a></li>
+            <li><a href="#faqs">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Legal &amp; Policy</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about/">About Us</a></li>
+            <li><a href="contact/">Contact Us</a></li>
+            <li><a href="privacy-policy/">Privacy Policy</a></li>
+            <li><a href="terms-and-conditions/">Terms and Conditions</a></li>
+            <li><a href="disclaimer/">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Independent Fan-Site Disclaimer -->
+      <div class="footer-disclaimer-box">
+        <strong>Independent Fan-Site Notice:</strong> Don't Splash Script is an independent fan and educational website. We are not affiliated with, authorized, maintained, sponsored, or endorsed by Roblox Corporation, the developers of DONT SPLASH, or any of their affiliates. Roblox and DONT SPLASH are registered trademarks of their respective owners. All scripts published here are educational Lua snippets designed for Roblox Studio development.
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; <span class="dynamic-year">2026</span> Don't Splash Script. All rights reserved.
+        </div>
+        <div class="footer-contact-link">
+          Inquiries: <a href="mailto:support@dontsplashscript.com" data-config="contactEmail">support@dontsplashscript.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modular JavaScript Architecture -->
+  <script src="js/config.js"></script>
+  <script src="data/scripts.js"></script>
+  <script src="data/faqs.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/script-card.js"></script>
+  <script src="js/components/faq.js"></script>
+  <script src="js/components/ads.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

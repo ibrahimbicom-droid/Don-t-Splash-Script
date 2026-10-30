@@ -1,0 +1,73 @@
+/**
+ * Don't Splash Script - Google AdSense Compliant Placeholder Styles
+ * Adheres strictly to Google Publisher Policies & Layout Guidelines
+ */
+
+.ad-container {
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+  clear: both;
+}
+
+.ad-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.ad-slot-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: rgba(13, 20, 36, 0.4);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-md);
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  padding: 16px;
+  min-height: 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ad-slot-placeholder svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 6px;
+  opacity: 0.4;
+}
+
+.ad-slot-placeholder .ad-slot-info {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Common Standard Ad Formats */
+.ad-slot-leaderboard {
+  max-width: 728px;
+  min-height: 90px;
+}
+
+.ad-slot-rectangle {
+  max-width: 336px;
+  min-height: 280px;
+}
+
+.ad-slot-banner {
+  max-width: 468px;
+  min-height: 60px;
+}
+
+/* Guard against accidental clicks: ensure safe spacing from interactive buttons */
+.ad-safe-margin {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
