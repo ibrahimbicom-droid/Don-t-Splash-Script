@@ -1,5 +1,6 @@
+
 /**
- * Don't Splash Script - Contact Form Validation & Anti-Spam
+ * Don't Splash Script - Contact Form Validation & Web3Forms
  */
 
 function initContactForm() {
@@ -15,70 +16,76 @@ function initContactForm() {
   const errorAlert = document.getElementById('form-error-alert');
   const submitBtn = document.getElementById('contact-submit-btn');
 
-  // Simple email pattern check
+  // Add your actual Web3Forms Access Key here
+  const WEB3FORMS_ACCESS_KEY = '9ddb1dbe-7ade-4407-a9b7-d4cd9ff8026a';
+
   function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }
 
   function setError(inputElement, hasError) {
+    if (!inputElement) return;
+
     const parentGroup = inputElement.closest('.form-group');
+
     if (parentGroup) {
-      if (hasError) {
-        parentGroup.classList.add('has-error');
-      } else {
-        parentGroup.classList.remove('has-error');
-      }
+      parentGroup.classList.toggle('has-error', hasError);
     }
   }
 
-  // Live input cleanup
+  // Live input validation
   [nameInput, emailInput, subjectInput, messageInput].forEach(field => {
     if (field) {
       field.addEventListener('input', () => {
         setError(field, false);
-        if (errorAlert) errorAlert.style.display = 'none';
+
+        if (errorAlert) {
+          errorAlert.style.display = 'none';
+        }
       });
     }
   });
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Check honeypot spam trap
+    // Honeypot spam protection
     if (botTrap && botTrap.value.trim() !== '') {
-      // Quietly drop bot submission
       return;
     }
 
+    if (successAlert) successAlert.style.display = 'none';
+    if (errorAlert) errorAlert.style.display = 'none';
+
     let hasErrors = false;
 
-    // Validate Name
-    if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+    // Validate name
+    if (!nameInput || nameInput.value.trim().length < 2) {
       setError(nameInput, true);
       hasErrors = true;
     } else {
       setError(nameInput, false);
     }
 
-    // Validate Email
-    if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) {
+    // Validate email
+    if (!emailInput || !isValidEmail(emailInput.value.trim())) {
       setError(emailInput, true);
       hasErrors = true;
     } else {
       setError(emailInput, false);
     }
 
-    // Validate Subject
-    if (!subjectInput.value.trim() || subjectInput.value.trim().length < 3) {
+    // Validate subject
+    if (!subjectInput || subjectInput.value.trim().length < 3) {
       setError(subjectInput, true);
       hasErrors = true;
     } else {
       setError(subjectInput, false);
     }
 
-    // Validate Message
-    if (!messageInput.value.trim() || messageInput.value.trim().length < 15) {
+    // Validate message
+    if (!messageInput || messageInput.value.trim().length < 15) {
       setError(messageInput, true);
       hasErrors = true;
     } else {
@@ -88,37 +95,90 @@ function initContactForm() {
     if (hasErrors) {
       if (errorAlert) {
         errorAlert.style.display = 'flex';
-        errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        errorAlert.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest'
+        });
       }
       return;
     }
 
-    // Simulate submission state
-    submitBtn.disabled = true;
+    if (!submitBtn) return;
+
     const originalBtnText = submitBtn.innerHTML;
-    submitBtn.innerHTML = `
-      <svg class="animate-spin" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
-        <circle cx="12" cy="12" r="10" stroke-width="4" stroke-opacity="0.25"></circle>
-        <path stroke-width="4" d="M4 12a8 8 0 018-8v8H4z" fill="currentColor"></path>
-      </svg>
-      Sending Inquiry...
-    `;
 
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending Inquiry...';
 
+    try {
+      // Prepare form data
+      const formData = new FormData(form);
+
+      // Add Web3Forms Access Key
+      formData.set('access_key', WEB3FORMS_ACCESS_KEY);
+
+      // Send form data to Web3Forms
+      const response = await fetch(
+        'https://api.web3forms.com/submit',
+        {
+          method: 'POST',
+          body: formData,
+          headers: {
+            Accept: 'application/json'
+          }
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || 'Form submission failed.'
+        );
+      }
+
+      // Successful submission
       form.reset();
-      if (errorAlert) errorAlert.style.display = 'none';
+
       if (successAlert) {
         successAlert.style.display = 'flex';
-        successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        successAlert.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest'
+        });
       }
 
       if (window.showToast) {
-        window.showToast('Message Sent', 'Thank you! Your inquiry has been recorded and our team will get back to you soon.', 'success');
+        window.showToast(
+          'Message Sent',
+          'Thank you! Your inquiry has been sent successfully.',
+          'success'
+        );
       }
-    }, 1000);
+
+    } catch (error) {
+      console.error('Web3Forms Error:', error);
+
+      if (errorAlert) {
+        errorAlert.style.display = 'flex';
+        errorAlert.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest'
+        });
+      }
+
+      if (window.showToast) {
+        window.showToast(
+          'Submission Failed',
+          'Your message could not be sent. Please try again.',
+          'error'
+        );
+      }
+
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    }
   });
 }
 
